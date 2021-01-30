@@ -1,0 +1,615 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AEA4E65B25C592E200F18697 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA4E65A25C592E200F18697 /* AppDelegate.swift */; };
+		AEA4E65D25C592E200F18697 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA4E65C25C592E200F18697 /* SceneDelegate.swift */; };
+		AEA4E65F25C592E200F18697 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA4E65E25C592E200F18697 /* ViewController.swift */; };
+		AEA4E66225C592E200F18697 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEA4E66025C592E200F18697 /* Main.storyboard */; };
+		AEA4E66525C592E200F18697 /* Euro2020.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AEA4E66325C592E200F18697 /* Euro2020.xcdatamodeld */; };
+		AEA4E66725C592E300F18697 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEA4E66625C592E300F18697 /* Assets.xcassets */; };
+		AEA4E66A25C592E300F18697 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEA4E66825C592E300F18697 /* LaunchScreen.storyboard */; };
+		AEA4E67525C592E300F18697 /* Euro2020Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA4E67425C592E300F18697 /* Euro2020Tests.swift */; };
+		AEA4E68025C592E300F18697 /* Euro2020UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA4E67F25C592E300F18697 /* Euro2020UITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AEA4E67125C592E300F18697 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AEA4E64F25C592E200F18697 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AEA4E65625C592E200F18697;
+			remoteInfo = Euro2020;
+		};
+		AEA4E67C25C592E300F18697 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AEA4E64F25C592E200F18697 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AEA4E65625C592E200F18697;
+			remoteInfo = Euro2020;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AEA4E65725C592E200F18697 /* Euro2020.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Euro2020.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEA4E65A25C592E200F18697 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AEA4E65C25C592E200F18697 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		AEA4E65E25C592E200F18697 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AEA4E66125C592E200F18697 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AEA4E66425C592E200F18697 /* Euro2020.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Euro2020.xcdatamodel; sourceTree = "<group>"; };
+		AEA4E66625C592E300F18697 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AEA4E66925C592E300F18697 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AEA4E66B25C592E300F18697 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AEA4E67025C592E300F18697 /* Euro2020Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Euro2020Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEA4E67425C592E300F18697 /* Euro2020Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Euro2020Tests.swift; sourceTree = "<group>"; };
+		AEA4E67625C592E300F18697 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AEA4E67B25C592E300F18697 /* Euro2020UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Euro2020UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEA4E67F25C592E300F18697 /* Euro2020UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Euro2020UITests.swift; sourceTree = "<group>"; };
+		AEA4E68125C592E300F18697 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AEA4E65425C592E200F18697 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEA4E66D25C592E300F18697 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEA4E67825C592E300F18697 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AEA4E64E25C592E200F18697 = {
+			isa = PBXGroup;
+			children = (
+				AEA4E65925C592E200F18697 /* Euro2020 */,
+				AEA4E67325C592E300F18697 /* Euro2020Tests */,
+				AEA4E67E25C592E300F18697 /* Euro2020UITests */,
+				AEA4E65825C592E200F18697 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AEA4E65825C592E200F18697 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AEA4E65725C592E200F18697 /* Euro2020.app */,
+				AEA4E67025C592E300F18697 /* Euro2020Tests.xctest */,
+				AEA4E67B25C592E300F18697 /* Euro2020UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AEA4E65925C592E200F18697 /* Euro2020 */ = {
+			isa = PBXGroup;
+			children = (
+				AEA4E65A25C592E200F18697 /* AppDelegate.swift */,
+				AEA4E65C25C592E200F18697 /* SceneDelegate.swift */,
+				AEA4E65E25C592E200F18697 /* ViewController.swift */,
+				AEA4E66025C592E200F18697 /* Main.storyboard */,
+				AEA4E66625C592E300F18697 /* Assets.xcassets */,
+				AEA4E66825C592E300F18697 /* LaunchScreen.storyboard */,
+				AEA4E66B25C592E300F18697 /* Info.plist */,
+				AEA4E66325C592E200F18697 /* Euro2020.xcdatamodeld */,
+			);
+			path = Euro2020;
+			sourceTree = "<group>";
+		};
+		AEA4E67325C592E300F18697 /* Euro2020Tests */ = {
+			isa = PBXGroup;
+			children = (
+				AEA4E67425C592E300F18697 /* Euro2020Tests.swift */,
+				AEA4E67625C592E300F18697 /* Info.plist */,
+			);
+			path = Euro2020Tests;
+			sourceTree = "<group>";
+		};
+		AEA4E67E25C592E300F18697 /* Euro2020UITests */ = {
+			isa = PBXGroup;
+			children = (
+				AEA4E67F25C592E300F18697 /* Euro2020UITests.swift */,
+				AEA4E68125C592E300F18697 /* Info.plist */,
+			);
+			path = Euro2020UITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AEA4E65625C592E200F18697 /* Euro2020 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AEA4E68425C592E300F18697 /* Build configuration list for PBXNativeTarget "Euro2020" */;
+			buildPhases = (
+				AEA4E65325C592E200F18697 /* Sources */,
+				AEA4E65425C592E200F18697 /* Frameworks */,
+				AEA4E65525C592E200F18697 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Euro2020;
+			productName = Euro2020;
+			productReference = AEA4E65725C592E200F18697 /* Euro2020.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AEA4E66F25C592E300F18697 /* Euro2020Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AEA4E68725C592E300F18697 /* Build configuration list for PBXNativeTarget "Euro2020Tests" */;
+			buildPhases = (
+				AEA4E66C25C592E300F18697 /* Sources */,
+				AEA4E66D25C592E300F18697 /* Frameworks */,
+				AEA4E66E25C592E300F18697 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AEA4E67225C592E300F18697 /* PBXTargetDependency */,
+			);
+			name = Euro2020Tests;
+			productName = Euro2020Tests;
+			productReference = AEA4E67025C592E300F18697 /* Euro2020Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AEA4E67A25C592E300F18697 /* Euro2020UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AEA4E68A25C592E300F18697 /* Build configuration list for PBXNativeTarget "Euro2020UITests" */;
+			buildPhases = (
+				AEA4E67725C592E300F18697 /* Sources */,
+				AEA4E67825C592E300F18697 /* Frameworks */,
+				AEA4E67925C592E300F18697 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AEA4E67D25C592E300F18697 /* PBXTargetDependency */,
+			);
+			name = Euro2020UITests;
+			productName = Euro2020UITests;
+			productReference = AEA4E67B25C592E300F18697 /* Euro2020UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AEA4E64F25C592E200F18697 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1220;
+				LastUpgradeCheck = 1220;
+				TargetAttributes = {
+					AEA4E65625C592E200F18697 = {
+						CreatedOnToolsVersion = 12.2;
+					};
+					AEA4E66F25C592E300F18697 = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = AEA4E65625C592E200F18697;
+					};
+					AEA4E67A25C592E300F18697 = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = AEA4E65625C592E200F18697;
+					};
+				};
+			};
+			buildConfigurationList = AEA4E65225C592E200F18697 /* Build configuration list for PBXProject "Euro2020" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AEA4E64E25C592E200F18697;
+			productRefGroup = AEA4E65825C592E200F18697 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AEA4E65625C592E200F18697 /* Euro2020 */,
+				AEA4E66F25C592E300F18697 /* Euro2020Tests */,
+				AEA4E67A25C592E300F18697 /* Euro2020UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AEA4E65525C592E200F18697 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEA4E66A25C592E300F18697 /* LaunchScreen.storyboard in Resources */,
+				AEA4E66725C592E300F18697 /* Assets.xcassets in Resources */,
+				AEA4E66225C592E200F18697 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEA4E66E25C592E300F18697 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEA4E67925C592E300F18697 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AEA4E65325C592E200F18697 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEA4E66525C592E200F18697 /* Euro2020.xcdatamodeld in Sources */,
+				AEA4E65F25C592E200F18697 /* ViewController.swift in Sources */,
+				AEA4E65B25C592E200F18697 /* AppDelegate.swift in Sources */,
+				AEA4E65D25C592E200F18697 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEA4E66C25C592E300F18697 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEA4E67525C592E300F18697 /* Euro2020Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEA4E67725C592E300F18697 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEA4E68025C592E300F18697 /* Euro2020UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AEA4E67225C592E300F18697 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AEA4E65625C592E200F18697 /* Euro2020 */;
+			targetProxy = AEA4E67125C592E300F18697 /* PBXContainerItemProxy */;
+		};
+		AEA4E67D25C592E300F18697 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AEA4E65625C592E200F18697 /* Euro2020 */;
+			targetProxy = AEA4E67C25C592E300F18697 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AEA4E66025C592E200F18697 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AEA4E66125C592E200F18697 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AEA4E66825C592E300F18697 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AEA4E66925C592E300F18697 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AEA4E68225C592E300F18697 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AEA4E68325C592E300F18697 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AEA4E68525C592E300F18697 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SC862SLTU9;
+				INFOPLIST_FILE = Euro2020/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = StephaneTrouve.Euro2020;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AEA4E68625C592E300F18697 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SC862SLTU9;
+				INFOPLIST_FILE = Euro2020/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = StephaneTrouve.Euro2020;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AEA4E68825C592E300F18697 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SC862SLTU9;
+				INFOPLIST_FILE = Euro2020Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = StephaneTrouve.Euro2020Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Euro2020.app/Euro2020";
+			};
+			name = Debug;
+		};
+		AEA4E68925C592E300F18697 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SC862SLTU9;
+				INFOPLIST_FILE = Euro2020Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = StephaneTrouve.Euro2020Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Euro2020.app/Euro2020";
+			};
+			name = Release;
+		};
+		AEA4E68B25C592E300F18697 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SC862SLTU9;
+				INFOPLIST_FILE = Euro2020UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = StephaneTrouve.Euro2020UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Euro2020;
+			};
+			name = Debug;
+		};
+		AEA4E68C25C592E300F18697 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SC862SLTU9;
+				INFOPLIST_FILE = Euro2020UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = StephaneTrouve.Euro2020UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Euro2020;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AEA4E65225C592E200F18697 /* Build configuration list for PBXProject "Euro2020" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEA4E68225C592E300F18697 /* Debug */,
+				AEA4E68325C592E300F18697 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AEA4E68425C592E300F18697 /* Build configuration list for PBXNativeTarget "Euro2020" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEA4E68525C592E300F18697 /* Debug */,
+				AEA4E68625C592E300F18697 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AEA4E68725C592E300F18697 /* Build configuration list for PBXNativeTarget "Euro2020Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEA4E68825C592E300F18697 /* Debug */,
+				AEA4E68925C592E300F18697 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AEA4E68A25C592E300F18697 /* Build configuration list for PBXNativeTarget "Euro2020UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEA4E68B25C592E300F18697 /* Debug */,
+				AEA4E68C25C592E300F18697 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		AEA4E66325C592E200F18697 /* Euro2020.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AEA4E66425C592E200F18697 /* Euro2020.xcdatamodel */,
+			);
+			currentVersion = AEA4E66425C592E200F18697 /* Euro2020.xcdatamodel */;
+			path = Euro2020.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = AEA4E64F25C592E200F18697 /* Project object */;
+}
