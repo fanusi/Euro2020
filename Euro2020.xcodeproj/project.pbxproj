@@ -16,6 +16,9 @@
 		AEA4E66A25C592E300F18697 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEA4E66825C592E300F18697 /* LaunchScreen.storyboard */; };
 		AEA4E67525C592E300F18697 /* Euro2020Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA4E67425C592E300F18697 /* Euro2020Tests.swift */; };
 		AEA4E68025C592E300F18697 /* Euro2020UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA4E67F25C592E300F18697 /* Euro2020UITests.swift */; };
+		AEE1392E25C5989400A45949 /* UIScrollView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE1392B25C5989400A45949 /* UIScrollView+.swift */; };
+		AEE1392F25C5989400A45949 /* UILabel+.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE1392C25C5989400A45949 /* UILabel+.swift */; };
+		AEE1393025C5989400A45949 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE1392D25C5989400A45949 /* UIView+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		AEA4E67B25C592E300F18697 /* Euro2020UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Euro2020UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEA4E67F25C592E300F18697 /* Euro2020UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Euro2020UITests.swift; sourceTree = "<group>"; };
 		AEA4E68125C592E300F18697 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AEE1392B25C5989400A45949 /* UIScrollView+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+.swift"; sourceTree = "<group>"; };
+		AEE1392C25C5989400A45949 /* UILabel+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+.swift"; sourceTree = "<group>"; };
+		AEE1392D25C5989400A45949 /* UIView+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +107,7 @@
 		AEA4E65925C592E200F18697 /* Euro2020 */ = {
 			isa = PBXGroup;
 			children = (
+				AEE1392A25C5984500A45949 /* Helpers */,
 				AEA4E65A25C592E200F18697 /* AppDelegate.swift */,
 				AEA4E65C25C592E200F18697 /* SceneDelegate.swift */,
 				AEA4E65E25C592E200F18697 /* ViewController.swift */,
@@ -129,6 +136,16 @@
 				AEA4E68125C592E300F18697 /* Info.plist */,
 			);
 			path = Euro2020UITests;
+			sourceTree = "<group>";
+		};
+		AEE1392A25C5984500A45949 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				AEE1392C25C5989400A45949 /* UILabel+.swift */,
+				AEE1392B25C5989400A45949 /* UIScrollView+.swift */,
+				AEE1392D25C5989400A45949 /* UIView+.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,8 +278,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEE1392F25C5989400A45949 /* UILabel+.swift in Sources */,
 				AEA4E66525C592E200F18697 /* Euro2020.xcdatamodeld in Sources */,
+				AEE1393025C5989400A45949 /* UIView+.swift in Sources */,
 				AEA4E65F25C592E200F18697 /* ViewController.swift in Sources */,
+				AEE1392E25C5989400A45949 /* UIScrollView+.swift in Sources */,
 				AEA4E65B25C592E200F18697 /* AppDelegate.swift in Sources */,
 				AEA4E65D25C592E200F18697 /* SceneDelegate.swift in Sources */,
 			);
