@@ -59,6 +59,8 @@ class ViewController: UIViewController {
             scrollview.addSubview(views[i])
             views[i].frame = CGRect(x: view.frame.width * CGFloat(i), y: 0, width: view.frame.width, height: view.frame.height)
         }
+        scrollview.delegate = self
+        
         return scrollview
         
     }()
@@ -66,6 +68,7 @@ class ViewController: UIViewController {
     lazy var pageControl: UIPageControl = {
        let pageControl = UIPageControl()
         pageControl.numberOfPages = views.count
+        pageControl.currentPage = 0
         pageControl.addTarget(self, action: #selector(pageControlTapHandler(sender:)), for: .touchUpInside)
         return pageControl
     
@@ -84,7 +87,7 @@ class ViewController: UIViewController {
         scrollview.edgeTo(view: view)
         
         view.addSubview(pageControl)
-        scrollview.pinTo(view)
+        pageControl.pinTo(view)
         
     }
 
@@ -93,6 +96,7 @@ class ViewController: UIViewController {
 
 extension ViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        
+        let pageIndex = round(scrollview.contentOffset.x / view.frame.width)
+        pageControl.currentPage = Int(pageIndex)
     }
 }
