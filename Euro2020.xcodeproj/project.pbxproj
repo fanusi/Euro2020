@@ -18,6 +18,7 @@
 		AEE1392E25C5989400A45949 /* UIScrollView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE1392B25C5989400A45949 /* UIScrollView+.swift */; };
 		AEE1392F25C5989400A45949 /* UILabel+.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE1392C25C5989400A45949 /* UILabel+.swift */; };
 		AEE1393025C5989400A45949 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE1392D25C5989400A45949 /* UIView+.swift */; };
+		AEE901F325C959C400013A00 /* JsonData1.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE901F225C959C400013A00 /* JsonData1.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		AEE1392B25C5989400A45949 /* UIScrollView+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+.swift"; sourceTree = "<group>"; };
 		AEE1392C25C5989400A45949 /* UILabel+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+.swift"; sourceTree = "<group>"; };
 		AEE1392D25C5989400A45949 /* UIView+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		AEE901F225C959C400013A00 /* JsonData1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonData1.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				AEA4E65A25C592E200F18697 /* AppDelegate.swift */,
 				AEA4E65C25C592E200F18697 /* SceneDelegate.swift */,
 				AEA4E65E25C592E200F18697 /* ViewController.swift */,
+				AEE901F225C959C400013A00 /* JsonData1.swift */,
 				AEA4E66625C592E300F18697 /* Assets.xcassets */,
 				AEA4E66825C592E300F18697 /* LaunchScreen.storyboard */,
 				AEA4E66B25C592E300F18697 /* Info.plist */,
@@ -281,6 +284,7 @@
 				AEE1392E25C5989400A45949 /* UIScrollView+.swift in Sources */,
 				AEA4E65B25C592E200F18697 /* AppDelegate.swift in Sources */,
 				AEA4E65D25C592E200F18697 /* SceneDelegate.swift in Sources */,
+				AEE901F325C959C400013A00 /* JsonData1.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
