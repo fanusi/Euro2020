@@ -17,16 +17,35 @@ class ViewController: UIViewController {
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+    
+        fixtureParsing()
+        
+        view.addSubview(scrollview)
+        scrollview.edgeTo(view: view)
+
+        view.addSubview(pageControl)
+        pageControl.pinTo(view)
+        
+        //scoreView()
+        
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
+//
+//            self.scoreView()
+//
+//        }
+            
+    }
+
+    
     lazy var view0: UIView = {
         let view = UIView()
         
-        view.backgroundColor = .white
-//        let label = UILabel()
-//        label.text = "Page 1"
-//        label.textAlignment = .center
-//        view.addSubview(label)
-//        label.edgeTo(view: view)
-        
+        view.backgroundColor = .systemGray5
+ 
+        //scoreView(view1: view)
         return view
         
     }()
@@ -68,6 +87,9 @@ class ViewController: UIViewController {
             scrollview.addSubview(views[i])
             views[i].frame = CGRect(x: view.frame.width * CGFloat(i), y: 0, width: view.frame.width, height: view.frame.height)
         }
+        
+        scoreView(view1: views[0])
+        
         scrollview.delegate = self
         
         return scrollview
@@ -88,23 +110,6 @@ class ViewController: UIViewController {
         scrollview.scrollTo(horizontalPage: sender.currentPage, animated: true)
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    
-        fixtureParsing()
-        
-        self.temp()
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
-            
-            self.scoreView()
-            
-        }
-
-        
-            
-    }
     
     func temp () {
         
@@ -117,16 +122,40 @@ class ViewController: UIViewController {
     }
     
 
-    func scoreView () {
+    func scoreView (view1: UIView) {
         
-        testpronos()
-        routine()
-        createlabels()
+        if PronosA.count > 0 {
+
+            testpronos()
+            routine()
+            createlabels(view1: view1)
+            
+        } else {
+            
+            let br = view1.bounds.width
+            let ho = view1.bounds.height
+            let label1 = UILabel(frame: CGRect(x: br * 0.30, y: ho * 0.35, width: br * 0.40, height: ho * 0.25))
+            label1.textAlignment = NSTextAlignment.left
+            label1.font.withSize(18)
+            label1.text = "No internet connection"
+            label1.textColor = .black
+            view1.addSubview(label1)
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            
+                self.views[0].subviews.forEach { (item) in
+                item.removeFromSuperview()
+                }
+                self.scoreView(view1: self.views[0])
+            
+            }
+            
+        }
         
     }
     
     
-    func createlabels() {
+    func createlabels(view1: UIView) {
         
         let t:Int = 20
         // Create t+1 test pronos
@@ -134,8 +163,8 @@ class ViewController: UIViewController {
         let g:Int = 20
         // Number of games
         
-        let br = view0.bounds.width
-        let ho = view0.bounds.height
+        let br = view1.bounds.width
+        let ho = view1.bounds.height
         
         let label1 = UILabel(frame: CGRect(x: br * 0.05, y: ho * 0.10 + ho * 0.05, width: br * 0.40, height: ho * 0.05))
         
@@ -146,14 +175,14 @@ class ViewController: UIViewController {
         label1.font.withSize(12)
         //label.backgroundColor = .red
         label1.textColor = .black
-        view0.addSubview(label1)
+        view1.addSubview(label1)
                             
         label2.textAlignment = NSTextAlignment.center
         label2.text = "Points"
         label2.font.withSize(12)
         //label.backgroundColor = .red
         label2.textColor = .black
-        view0.addSubview(label2)
+        view1.addSubview(label2)
         
         
         for i in 0...t {
@@ -169,14 +198,14 @@ class ViewController: UIViewController {
             label1.font.withSize(12)
             //label.backgroundColor = .red
             label1.textColor = .black
-            view0.addSubview(label1)
+            view1.addSubview(label1)
                                 
             label2.textAlignment = NSTextAlignment.center
             label2.text = String(puntenSommatie(z: g, speler: PronosB[i]))
             label2.font.withSize(12)
             //label.backgroundColor = .red
             label2.textColor = .black
-            view0.addSubview(label2)
+            view1.addSubview(label2)
             
         }
         
@@ -283,63 +312,46 @@ class ViewController: UIViewController {
     func testpronos () {
         
         //Populate PronosB with random data
+            
+            
+            let t:Int = 20
+            // Create t+1 test pronos
         
-        let t:Int = 20
-        // Create t+1 test pronos
-    
-        let g:Int = 20
-        // Number of games
-        
-        for i in 0...t {
+            let g:Int = 20
+            // Number of games
             
-            // Loop players
-            
-            let newArrayFixtures = [Pronostiek(context: self.context)]
-            PronosB.append(newArrayFixtures)
-            
-            PronosB[i][0].user = "User " + String(i+1)
-            PronosB[i][0].fixture_ID = PronosA[0].fixture_ID
-            PronosB[i][0].round = PronosA[0].round
-            PronosB[i][0].home_Goals = Int16.random(in: 0..<4)
-            PronosB[i][0].away_Goals = Int16.random(in: 0..<4)
-            PronosB[i][0].home_Team = PronosA[0].home_Team
-            PronosB[i][0].away_Team = PronosA[0].away_Team
-            
-            for n in 1...g {
+            for i in 0...t {
                 
-                // Loop games
+                // Loop players
+                
+                let newArrayFixtures = [Pronostiek(context: self.context)]
+                PronosB.append(newArrayFixtures)
+                
+                PronosB[i][0].user = "User " + String(i+1)
+                PronosB[i][0].fixture_ID = PronosA[0].fixture_ID
+                PronosB[i][0].round = PronosA[0].round
+                PronosB[i][0].home_Goals = Int16.random(in: 0..<4)
+                PronosB[i][0].away_Goals = Int16.random(in: 0..<4)
+                PronosB[i][0].home_Team = PronosA[0].home_Team
+                PronosB[i][0].away_Team = PronosA[0].away_Team
+                
+                for n in 1...g {
+                    
+                    // Loop games
 
-                let newFixture = Pronostiek(context: self.context)
-                newFixture.user = "User " + String(i+1)
-                newFixture.fixture_ID = PronosA[n].fixture_ID
-                newFixture.round = PronosA[n].round
-                newFixture.home_Goals = Int16.random(in: 0..<4)
-                newFixture.away_Goals = Int16.random(in: 0..<4)
-                newFixture.home_Team = PronosA[n].home_Team
-                newFixture.away_Team = PronosA[n].away_Team
-                PronosB[i].append(newFixture)
+                    let newFixture = Pronostiek(context: self.context)
+                    newFixture.user = "User " + String(i+1)
+                    newFixture.fixture_ID = PronosA[n].fixture_ID
+                    newFixture.round = PronosA[n].round
+                    newFixture.home_Goals = Int16.random(in: 0..<4)
+                    newFixture.away_Goals = Int16.random(in: 0..<4)
+                    newFixture.home_Team = PronosA[n].home_Team
+                    newFixture.away_Team = PronosA[n].away_Team
+                    PronosB[i].append(newFixture)
+                    
+                }
                 
             }
-            
-        }
-
-//        for n in 0...g {
-//
-//            for i in 0...t  {
-//
-//                print(n)
-//                print(i)
-//                print(PronosB[i][n].user ?? "Error 1")
-//                print(PronosB[i][n].fixture_ID)
-//                print(PronosB[i][n].home_Team)
-//                print(PronosB[i][n].away_Team)
-//                print(PronosB[i][n].home_Goals ?? "Error 1")
-//                print(PronosB[i][n].away_Goals ?? "Error 1")
-//                print("Next")
-//
-//            }
-//
-//        }
         
     }
     
@@ -413,5 +425,39 @@ extension ViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let pageIndex = round(scrollview.contentOffset.x / view.frame.width)
         pageControl.currentPage = Int(pageIndex)
+        
+        if pageControl.currentPage == 0 {
+            
+            views[0].subviews.forEach { (item) in
+                item.removeFromSuperview()
+            }
+        
+            scoreView(view1: views[0])
+            
+        }
+        
+    }
+    
+    func scrollViewDidScrollToTop(_ scrollView: UIScrollView) {
+        
+        let pageIndex = round(scrollview.contentOffset.x / view.frame.width)
+        pageControl.currentPage = Int(pageIndex)
+        
+        if pageControl.currentPage == 0 {
+            
+            views[0].subviews.forEach { (item) in
+                item.removeFromSuperview()
+            }
+        
+            scoreView(view1: views[0])
+            
+        }
+    }
+    
+}
+
+extension UIView {
+    func removeAllSubviews() {
+        subviews.forEach { $0.removeFromSuperview() }
     }
 }
