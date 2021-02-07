@@ -40,9 +40,9 @@ class ViewController: UIViewController {
     }
 
     
-    lazy var view0: UIView = {
-        let view = UIView()
-        
+    lazy var view0: UIScrollView = {
+        let view = UIScrollView()
+        view.showsVerticalScrollIndicator = false
         view.backgroundColor = .systemGray5
  
         //scoreView(view1: view)
@@ -50,27 +50,29 @@ class ViewController: UIViewController {
         
     }()
 
-    lazy var view1: UIView = {
-        let view = UIView()
+    lazy var view1: UIScrollView = {
+        let view = UIScrollView()
+        view.showsVerticalScrollIndicator = false
         view.backgroundColor = .systemPink
         let label = UILabel()
         label.text = "Page 2"
         label.textAlignment = .center
         view.addSubview(label)
-        label.edgeTo(view: view)
+        label.edgeTo2(view: view)
         
         return view
         
     }()
     
-    lazy var view2: UIView = {
-        let view = UIView()
+    lazy var view2: UIScrollView = {
+        let view = UIScrollView()
+        view.showsVerticalScrollIndicator = false
         view.backgroundColor = .systemBlue
         let label = UILabel()
         label.text = "Page 3"
         label.textAlignment = .center
         view.addSubview(label)
-        label.edgeTo(view: view)
+        label.edgeTo2(view: view)
         
         return view
         
@@ -122,13 +124,14 @@ class ViewController: UIViewController {
     }
     
 
-    func scoreView (view1: UIView) {
+    func scoreView (view1: UIScrollView) {
         
         if PronosA.count > 0 {
 
             testpronos()
             routine()
             createlabels(view1: view1)
+            view1.contentSize = CGSize(width: view.frame.width, height: view.frame.height * CGFloat(Double(PronosB.count + 3) * 0.05))
             
         } else {
             
@@ -155,7 +158,7 @@ class ViewController: UIViewController {
     }
     
     
-    func createlabels(view1: UIView) {
+    func createlabels(view1: UIScrollView) {
         
         let t:Int = 20
         // Create t+1 test pronos
@@ -166,9 +169,9 @@ class ViewController: UIViewController {
         let br = view1.bounds.width
         let ho = view1.bounds.height
         
-        let label1 = UILabel(frame: CGRect(x: br * 0.05, y: ho * 0.10 + ho * 0.05, width: br * 0.40, height: ho * 0.05))
+        let label1 = UILabel(frame: CGRect(x: br * 0.15, y: ho * 0.05, width: br * 0.40, height: ho * 0.05))
         
-        let label2 = UILabel(frame: CGRect(x: br * 0.50, y: ho * 0.10 + ho * 0.05, width: br * 0.20, height: ho * 0.05))
+        let label2 = UILabel(frame: CGRect(x: br * 0.65, y: ho * 0.05, width: br * 0.20, height: ho * 0.05))
         
         label1.textAlignment = NSTextAlignment.left
         label1.text = "Player"
@@ -187,9 +190,9 @@ class ViewController: UIViewController {
         
         for i in 0...t {
             
-            let label1 = UILabel(frame: CGRect(x: br * 0.05, y: ho * 0.20 + ho * 0.05 * CGFloat(i), width: br * 0.40, height: ho * 0.05))
+            let label1 = UILabel(frame: CGRect(x: br * 0.15, y: ho * 0.10 + ho * 0.05 * CGFloat(i), width: br * 0.40, height: ho * 0.05))
             
-            let label2 = UILabel(frame: CGRect(x: br * 0.50, y: ho * 0.20 + ho * 0.05 * CGFloat(i), width: br * 0.20, height: ho * 0.05))
+            let label2 = UILabel(frame: CGRect(x: br * 0.65, y: ho * 0.10 + ho * 0.05 * CGFloat(i), width: br * 0.20, height: ho * 0.05))
             
             //Test 2
             
@@ -313,7 +316,8 @@ class ViewController: UIViewController {
         
         //Populate PronosB with random data
             
-            
+        PronosB.removeAll()
+        
             let t:Int = 20
             // Create t+1 test pronos
         
