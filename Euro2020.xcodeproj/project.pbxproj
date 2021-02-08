@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE6EE4CA25D003F5000392AF /* Visualizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6EE4C925D003F5000392AF /* Visualizer.swift */; };
 		AEA4E65B25C592E200F18697 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA4E65A25C592E200F18697 /* AppDelegate.swift */; };
 		AEA4E65D25C592E200F18697 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA4E65C25C592E200F18697 /* SceneDelegate.swift */; };
 		AEA4E65F25C592E200F18697 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA4E65E25C592E200F18697 /* ViewController.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AE6EE4C925D003F5000392AF /* Visualizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Visualizer.swift; sourceTree = "<group>"; };
 		AEA4E65725C592E200F18697 /* Euro2020.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Euro2020.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEA4E65A25C592E200F18697 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AEA4E65C25C592E200F18697 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				AEA4E65A25C592E200F18697 /* AppDelegate.swift */,
 				AEA4E65C25C592E200F18697 /* SceneDelegate.swift */,
 				AEA4E65E25C592E200F18697 /* ViewController.swift */,
+				AE6EE4C925D003F5000392AF /* Visualizer.swift */,
 				AEE901F225C959C400013A00 /* JsonData1.swift */,
 				AEA4E66625C592E300F18697 /* Assets.xcassets */,
 				AEA4E66825C592E300F18697 /* LaunchScreen.storyboard */,
@@ -282,6 +285,7 @@
 				AEE1393025C5989400A45949 /* UIView+.swift in Sources */,
 				AEA4E65F25C592E200F18697 /* ViewController.swift in Sources */,
 				AEE1392E25C5989400A45949 /* UIScrollView+.swift in Sources */,
+				AE6EE4CA25D003F5000392AF /* Visualizer.swift in Sources */,
 				AEA4E65B25C592E200F18697 /* AppDelegate.swift in Sources */,
 				AEA4E65D25C592E200F18697 /* SceneDelegate.swift in Sources */,
 				AEE901F325C959C400013A00 /* JsonData1.swift in Sources */,

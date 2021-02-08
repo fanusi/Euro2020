@@ -20,7 +20,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-    
+        
+        view.backgroundColor = .systemGray5
+        
         fixtureParsing()
         
         view.addSubview(scrollview)
@@ -28,17 +30,28 @@ class ViewController: UIViewController {
 
         view.addSubview(pageControl)
         pageControl.pinTo(view)
-        
-        //scoreView()
-        
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
-//
-//            self.scoreView()
-//
-//        }
+    
             
     }
 
+
+    lazy var scrollview: UIScrollView = {
+        let scrollview = UIScrollView()
+        scrollview.showsHorizontalScrollIndicator = false
+        scrollview.isPagingEnabled = true
+        scrollview.contentSize = CGSize(width: view.frame.width * CGFloat(views.count), height: view.frame.height)
+        for i in 0..<views.count {
+            scrollview.addSubview(views[i])
+            views[i].frame = CGRect(x: view.frame.width * CGFloat(i), y: view.frame.height * 0.08, width: view.frame.width, height: view.frame.height * 0.84)
+        }
+        
+        scoreView(view1: views[0])
+        
+        scrollview.delegate = self
+        
+        return scrollview
+        
+    }()
     
     lazy var view0: UIScrollView = {
         let view = UIScrollView()
@@ -51,16 +64,25 @@ class ViewController: UIViewController {
     }()
 
     lazy var view1: UIScrollView = {
-        let view = UIScrollView()
-        view.showsVerticalScrollIndicator = false
-        view.backgroundColor = .systemPink
-        let label = UILabel()
-        label.text = "Page 2"
-        label.textAlignment = .center
-        view.addSubview(label)
-        label.edgeTo2(view: view)
+        let viewA = UIScrollView()
+        viewA.showsVerticalScrollIndicator = false
+        viewA.backgroundColor = .systemPink
+                
+        let UIPicker: UIPickerView = UIPickerView()
+        UIPicker.delegate = self as UIPickerViewDelegate
+        UIPicker.dataSource = self as UIPickerViewDataSource
         
-        return view
+        let view2 = UIView()
+        view2.frame = CGRect(x: 0, y: view.frame.height * 0.60, width: view.frame.width, height: view.frame.height * 0.20)
+        view2.backgroundColor = .gray
+        
+        view2.addSubview(UIPicker)
+        viewA.addSubview(view2)
+
+        UIPicker.backgroundColor = .green
+        UIPicker.center = view2.center
+        
+        return viewA
         
     }()
     
@@ -80,23 +102,6 @@ class ViewController: UIViewController {
     
     lazy var views = [view0, view1, view2]
     
-    lazy var scrollview: UIScrollView = {
-        let scrollview = UIScrollView()
-        scrollview.showsHorizontalScrollIndicator = false
-        scrollview.isPagingEnabled = true
-        scrollview.contentSize = CGSize(width: view.frame.width * CGFloat(views.count), height: view.frame.height)
-        for i in 0..<views.count {
-            scrollview.addSubview(views[i])
-            views[i].frame = CGRect(x: view.frame.width * CGFloat(i), y: 0, width: view.frame.width, height: view.frame.height)
-        }
-        
-        scoreView(view1: views[0])
-        
-        scrollview.delegate = self
-        
-        return scrollview
-        
-    }()
     
     lazy var pageControl: UIPageControl = {
        let pageControl = UIPageControl()
@@ -110,17 +115,6 @@ class ViewController: UIViewController {
     @objc
     func pageControlTapHandler(sender: UIPageControl) {
         scrollview.scrollTo(horizontalPage: sender.currentPage, animated: true)
-    }
-    
-    
-    func temp () {
-        
-        view.addSubview(scrollview)
-        scrollview.edgeTo(view: view)
-
-        view.addSubview(pageControl)
-        pageControl.pinTo(view)
-        
     }
     
 
@@ -137,10 +131,10 @@ class ViewController: UIViewController {
             
             let br = view1.bounds.width
             let ho = view1.bounds.height
-            let label1 = UILabel(frame: CGRect(x: br * 0.30, y: ho * 0.35, width: br * 0.40, height: ho * 0.25))
+            let label1 = UILabel(frame: CGRect(x: br * 0.40, y: ho * 0.35, width: br * 0.40, height: ho * 0.25))
             label1.textAlignment = NSTextAlignment.left
             label1.font.withSize(18)
-            label1.text = "No internet connection"
+            label1.text = "Fetching..."
             label1.textColor = .black
             view1.addSubview(label1)
             
@@ -457,6 +451,7 @@ extension ViewController: UIScrollViewDelegate {
             
         }
     }
+    
     
 }
 
